@@ -1,5 +1,4 @@
 "use client";
-import { TooltipProps } from "recharts";
 import {
   Bar,
   BarChart,
@@ -72,6 +71,7 @@ export function SimpleBarChart() {
   );
 }
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export function CustomTooltip({ active, payload, label }: any) {
   if (active && payload && payload?.length) {
     // Extract values for both bars (This_year and Last_year)

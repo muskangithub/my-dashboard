@@ -13,11 +13,13 @@ import {
 import { useState, useEffect } from "react";
 
 // Custom Tooltip Component
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
     return (
       <div className="p-2 bg-white border rounded shadow-md">
         <p className="font-semibold">{label}</p>
+        {/* eslint-disable @typescript-eslint/no-explicit-any  */}
         {payload.map((entry: any, index: number) => (
           <div key={index} className="flex items-center gap-2">
             <span
@@ -35,6 +37,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 };
 
 export function SalesChart() {
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   const [sales, setSales] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -45,7 +48,7 @@ export function SalesChart() {
         const response = await fetch("/api/sales");
         if (!response.ok) throw new Error("Failed to fetch sales data");
         const data = await response.json();
-
+        /* eslint-disable @typescript-eslint/no-explicit-any */
         const formattedData = data.map((item: any) => ({
           month: new Date(item.date).toLocaleString("en-US", {
             month: "short",

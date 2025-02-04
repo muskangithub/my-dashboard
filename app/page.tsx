@@ -12,6 +12,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const router = useRouter();
   const { toast } = useToast();
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const [loading, setLoading] = useState(false);
 
   const handleLogin = (e: React.FormEvent) => {

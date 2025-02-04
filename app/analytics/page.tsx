@@ -4,8 +4,6 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "../components/header";
 import { Sidebar } from "../components/sidebar";
-import { DashboardContent } from "../components/dashboard-content";
-import { RightColumn } from "../components/right-column";
 
 export default function DashboardPage() {
   const router = useRouter();

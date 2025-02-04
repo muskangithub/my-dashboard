@@ -18,7 +18,7 @@ import {
 // Dashboard content with authentication check
 export function DashboardContent() {
   const router = useRouter();
-  const [purchaseData, setPurchaseData] = useState<any>(null);
+  const [purchaseData, setPurchaseData] = useState(null);
   // Check if the user is logged in
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
